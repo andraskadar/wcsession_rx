@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Demo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="WatchConnectivity" textAlignment="center" numberOfLines="2" id="Jgy-rD-cpR">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <button width="1" alignment="center" verticalAlignment="bottom" hidden="YES" title="Say Hello." id="9Gb-nA-3te">
+                            <color key="backgroundColor" red="0.91372549020000005" green="0.70588235290000001" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="sayHelloButtonDidTouchUp" destination="AgC-eL-Hgc" id="sji-yd-q67"/>
+                            </connections>
+                        </button>
+                        <label alignment="center" verticalAlignment="center" text="---" textAlignment="center" numberOfLines="3" id="kwn-hl-bAa">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="connectivityLabel" destination="Jgy-rD-cpR" id="aAf-6e-5Ys"/>
+                        <outlet property="parentDeviceLabel" destination="kwn-hl-bAa" id="UMM-BT-CQr"/>
+                        <outlet property="sayHelloButton" destination="9Gb-nA-3te" id="ctY-sQ-u9k"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
