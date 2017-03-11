@@ -14,6 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		377D78DA906C10A40EB5B633 /* Pods-WCSession_Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCSession_Rx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCSession_Rx/Pods-WCSession_Rx.debug.xcconfig"; sourceTree = "<group>"; };
 		482BF407C52DD1CDA18B54DF /* Pods_WCSession_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCSession_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5137AFDA1E704B11005EBC80 /* WCSession_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WCSession_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5137AFDD1E704B11005EBC80 /* WCSession+Rx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WCSession+Rx.h"; sourceTree = "<group>"; };
@@ -21,6 +22,7 @@
 		5137B03C1E704EC5005EBC80 /* RxWCSessionDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxWCSessionDelegateProxy.swift; sourceTree = "<group>"; };
 		5137B03D1E704EC5005EBC80 /* WCSession+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WCSession+Rx.swift"; sourceTree = "<group>"; };
 		97C395EA773AB34261E1BF0A /* Pods-WCSession+Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCSession+Rx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCSession+Rx/Pods-WCSession+Rx.debug.xcconfig"; sourceTree = "<group>"; };
+		9F3D9C3A05779EB82816BE0A /* Pods-WCSession_Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCSession_Rx.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCSession_Rx/Pods-WCSession_Rx.release.xcconfig"; sourceTree = "<group>"; };
 		F0C656EBA2066843546FD23D /* Pods-WCSession+Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCSession+Rx.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCSession+Rx/Pods-WCSession+Rx.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,8 @@
 			children = (
 				97C395EA773AB34261E1BF0A /* Pods-WCSession+Rx.debug.xcconfig */,
 				F0C656EBA2066843546FD23D /* Pods-WCSession+Rx.release.xcconfig */,
+				377D78DA906C10A40EB5B633 /* Pods-WCSession_Rx.debug.xcconfig */,
+				9F3D9C3A05779EB82816BE0A /* Pods-WCSession_Rx.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -173,7 +177,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCSession+Rx/Pods-WCSession+Rx-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCSession_Rx/Pods-WCSession_Rx-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		46C3E9DECB9E0860757ADCAB /* [CP] Check Pods Manifest.lock */ = {
@@ -305,7 +309,7 @@
 		};
 		5137AFE31E704B11005EBC80 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97C395EA773AB34261E1BF0A /* Pods-WCSession+Rx.debug.xcconfig */;
+			baseConfigurationReference = 377D78DA906C10A40EB5B633 /* Pods-WCSession_Rx.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -329,7 +333,7 @@
 		};
 		5137AFE41E704B11005EBC80 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0C656EBA2066843546FD23D /* Pods-WCSession+Rx.release.xcconfig */;
+			baseConfigurationReference = 9F3D9C3A05779EB82816BE0A /* Pods-WCSession_Rx.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
