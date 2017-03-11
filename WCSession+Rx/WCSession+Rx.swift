@@ -6,10 +6,10 @@
 //  Copyright © 2017年 Inomoto Shintaro. All rights reserved.
 //
 
-import Foundation
 import WatchConnectivity
 import RxSwift
 import RxCocoa
+
 extension Reactive where Base: WCSession {
     public var delegate: DelegateProxy {
         if #available(watchOSApplicationExtension 2.2, *) {
