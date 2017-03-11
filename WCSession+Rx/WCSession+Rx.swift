@@ -38,9 +38,9 @@ extension Reactive where Base: WCSession {
     
     /** ------------------------- Interactive Messaging ------------------------- */
     @available(watchOS 2.0, *)
-    public var didChangeReachability: Observable<Void> {
+    public var didChangeReachability: Observable<Bool> {
         return delegate.methodInvoked(#selector(WCSessionDelegate.sessionReachabilityDidChange(_:))).map{ a in
-            return ()
+            return try self.castOrThrow(WCSession.self, a[0]).isReachable
         }
     }
     
