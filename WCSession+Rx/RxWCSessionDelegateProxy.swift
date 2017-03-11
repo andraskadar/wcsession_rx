@@ -6,8 +6,6 @@
 //  Copyright © 2017年 Inomoto Shintaro. All rights reserved.
 //
 
-import Foundation
-import Foundation
 import WatchConnectivity
 import RxSwift
 import RxCocoa
