@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "wcsession_rx"
+  s.name         = "WCSessionRx"
   s.version      = "0.0.1"
-  s.summary      = "WCSssion Reactive Extension with RxSwift."
+  s.summary      = "WCSession Reactive Extension with RxSwift."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
