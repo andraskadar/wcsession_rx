@@ -11,9 +11,9 @@ import RxSwift
 import RxCocoa
 
 extension Reactive where Base: WCSession {
-    public var delegate: DelegateProxy {
+    public var delegate: DelegateProxy<WCSession, WCSessionDelegate> {
         if #available(watchOSApplicationExtension 2.2, *) {
-            return RxWCSessionDelegateProxy.proxyForObject(base)
+            return RxWCSessionDelegateProxy.proxy(for: base)
         } else {
             fatalError("use watchOS 2.2 upper.")
         }
@@ -21,19 +21,12 @@ extension Reactive where Base: WCSession {
     
     @available(watchOS 2.2, *)
     public var activationState: Observable<WCSessionActivationState> {
-        return RxWCSessionDelegateProxy.proxyForObject(base).activationStateSubject
+        return RxWCSessionDelegateProxy.proxy(for: base).activationStateSubject
     }
     
     /*
     @available(watchOS 2.2, *)
-    public var didComplete: Observable<WCSessionActivationState> {
-        return delegate.methodInvoked(#selector(WCSessionDelegate.session(_:activationDidCompleteWith:error:))).map{ a in
-            if let error = a[2] as? Error {
-                throw error
-            }
-            return try self.castOrThrow(WCSessionActivationState.self, a[1])
-        }
-    }
+     public var didComplete: Observable<WCSessionActivationState> { ... }
      */
     
     /** ------------------------- Interactive Messaging ------------------------- */

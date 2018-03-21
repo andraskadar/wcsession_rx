@@ -22,7 +22,9 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        disposer = WCSession.default()
+        self.parentDeviceLabel.setText(nil)
+        
+        disposer = WCSession.default
             .rx.activationState
             .do(onNext: {
                 
@@ -52,7 +54,7 @@ class InterfaceController: WKInterfaceController {
                 
         }
 
-        disposer2 = WCSession.default()
+        disposer2 = WCSession.default
             .rx.didReceiveMessage
             .subscribe(onNext: {
                 
@@ -76,7 +78,7 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func sayHelloButtonDidTouchUp() {
         
-        WCSession.default()
+        WCSession.default
             .sendMessage(MessageConverter.userInfo(from: "Hello !!"),
                          replyHandler: { _ in },
                          errorHandler: { _ in })
@@ -85,7 +87,7 @@ class InterfaceController: WKInterfaceController {
     
     override func willActivate() {
         super.willActivate()
-        WCSession.default().activate()
+        WCSession.default.activate()
     }
     
     deinit {
