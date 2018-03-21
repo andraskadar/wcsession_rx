@@ -47,6 +47,11 @@ class InterfaceController: WKInterfaceController {
 
 }
 ```
+
+## Demo
+Source code: [Demo Project](https://github.com/shintarogit/wcsession_rx/tree/master/Demo)
+![Demo](Demo/demo-preview.gif)
+
 ## Requirements
 + watchOS 2.2
 
@@ -57,8 +62,8 @@ class InterfaceController: WKInterfaceController {
 use_frameworks!
 
 target 'YOUR_WATCH_EXTENSION_TARGET_NAME' do
-  pod 'RxSwift',    '~> 3.0.0'
-  pod 'RxCocoa',    '~> 3.0.0'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
   pod 'WCSessionRx'
 end
 
