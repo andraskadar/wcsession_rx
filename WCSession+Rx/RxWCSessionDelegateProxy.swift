@@ -10,17 +10,19 @@ import WatchConnectivity
 import RxSwift
 import RxCocoa
 
+extension WCSession: HasDelegate {
+    public typealias Delegate = WCSessionDelegate
+}
+
 @available(watchOSApplicationExtension 2.2, *)
-class RxWCSessionDelegateProxy: DelegateProxy, WCSessionDelegate, DelegateProxyType {
+public class RxWCSessionDelegateProxy: DelegateProxy<WCSession, WCSessionDelegate>, WCSessionDelegate, DelegateProxyType {
     
-    class func currentDelegateFor(_ object: AnyObject) -> AnyObject? {
-        let session: WCSession = object as! WCSession
-        return session.delegate
+    public init(session: WCSession) {
+        super.init(parentObject: session, delegateProxy: RxWCSessionDelegateProxy.self)
     }
     
-    class func setCurrentDelegate(_ delegate: AnyObject?, toObject object: AnyObject) {
-        let session: WCSession = object as! WCSession
-        session.delegate = delegate as? WCSessionDelegate
+    public static func registerKnownImplementations() {
+        self.register { RxWCSessionDelegateProxy(session: $0) }
     }
     
     fileprivate var _activationStateSubject: PublishSubject<WCSessionActivationState>?
@@ -36,7 +38,7 @@ class RxWCSessionDelegateProxy: DelegateProxy, WCSessionDelegate, DelegateProxyT
         return subject
     }
     
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
 
         if let error = error {
             _activationStateSubject?.on(.error(error))
