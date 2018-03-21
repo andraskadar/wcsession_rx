@@ -16,8 +16,8 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        WCSession.default().delegate = self
-        WCSession.default().activate()
+        WCSession.default.delegate = self
+        WCSession.default.activate()
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
@@ -48,7 +48,7 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
 
     @IBAction func goodByeButtonDidTouchUp(_ sender: UIButton) {
-        WCSession.default()
+        WCSession.default
             .sendMessage(MessageConverter.userInfo(from: "Good Bye !!"), replyHandler: nil, errorHandler: nil)
     }
 }
