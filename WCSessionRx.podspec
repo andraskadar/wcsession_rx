@@ -133,6 +133,6 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency  'RxSwift',    '~> 3.0.0'
-  s.dependency  'RxCocoa',    '~> 3.0.0'
+  s.dependency  'RxSwift',    '~> 4.0'
+  s.dependency  'RxCocoa',    '~> 4.0'
 end
