@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WCSessionRx"
-  s.version      = "0.0.3"
+  s.version      = "1.0.0"
   s.summary      = "WCSession Reactive Extension with RxSwift."
 
   # This description is used to generate tags and improve search results.
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/shintarogit/wcsession_rx.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://github.com/shintarogit/wcsession_rx.git", :tag => "1.0.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -133,6 +133,6 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency  'RxSwift',    '~> 3.0.0'
-  s.dependency  'RxCocoa',    '~> 3.0.0'
+  s.dependency  'RxSwift',    '~> 4.0'
+  s.dependency  'RxCocoa',    '~> 4.0'
 end
