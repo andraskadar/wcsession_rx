@@ -25,6 +25,28 @@ extension Reactive where Base: WCSession {
         return RxWCSessionDelegateProxy.proxy(for: base).activationStateSubject
     }
     
+    @available(iOS 9.3, *)
+    @available(watchOS 2.2, *)
+    public func sendMessage(_ message: [String: Any]) -> Single<[String: Any]> {
+        return Single.create { (observer) -> Disposable in
+            self.base.sendMessage(message,
+                                  replyHandler: { observer(.success($0)) },
+                                  errorHandler: { observer(.error($0)) })
+            return Disposables.create()
+        }
+    }
+    
+    @available(iOS 9.3, *)
+    @available(watchOS 2.2, *)
+    public func sendMessageData(_ data: Data) -> Single<Data> {
+        return Single.create { (observer) -> Disposable in
+            self.base.sendMessageData(data,
+                                  replyHandler: { observer(.success($0)) },
+                                  errorHandler: { observer(.error($0)) })
+            return Disposables.create()
+        }
+    }
+    
     /*
     @available(watchOS 2.2, *)
      public var didComplete: Observable<WCSessionActivationState> { ... }
