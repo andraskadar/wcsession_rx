@@ -12,13 +12,14 @@ import RxCocoa
 
 extension Reactive where Base: WCSession {
     public var delegate: DelegateProxy<WCSession, WCSessionDelegate> {
-        if #available(watchOSApplicationExtension 2.2, *) {
+        if #available(watchOSApplicationExtension 2.2, *), #available(iOS 9.3, *) {
             return RxWCSessionDelegateProxy.proxy(for: base)
         } else {
             fatalError("use watchOS 2.2 upper.")
         }
     }
     
+    @available(iOS 9.3, *)
     @available(watchOS 2.2, *)
     public var activationState: Observable<WCSessionActivationState> {
         return RxWCSessionDelegateProxy.proxy(for: base).activationStateSubject
@@ -30,6 +31,7 @@ extension Reactive where Base: WCSession {
      */
     
     /** ------------------------- Interactive Messaging ------------------------- */
+    @available(iOS 9.3, *)
     @available(watchOS 2.0, *)
     public var didChangeReachability: Observable<Bool> {
         return delegate.methodInvoked(#selector(WCSessionDelegate.sessionReachabilityDidChange(_:))).map{ a in
@@ -37,6 +39,7 @@ extension Reactive where Base: WCSession {
         }
     }
     
+    @available(iOS 9.3, *)
     @available(watchOS 2.0, *)
     public var didReceiveMessage: Observable<[String: Any]> {
         return delegate.methodInvoked(#selector(WCSessionDelegate.session(_:didReceiveMessage:))).map{ a in
@@ -44,6 +47,7 @@ extension Reactive where Base: WCSession {
         }
     }
     
+    @available(iOS 9.3, *)
     @available(watchOS 2.0, *)
     public var didReceiveMessageWithReplyHandler: Observable<(message: [String: Any], replyHandler: [String: Any])> {
         return delegate.methodInvoked(#selector(WCSessionDelegate.session(_:didReceiveMessage:replyHandler:))).map{ a in
@@ -51,6 +55,7 @@ extension Reactive where Base: WCSession {
         }
     }
     
+    @available(iOS 9.3, *)
     @available(watchOS 2.0, *)
     public var didReceiveMessageData: Observable<Data> {
         return delegate.methodInvoked(#selector(WCSessionDelegate.session(_:didReceiveMessageData:))).map{ a in
@@ -58,6 +63,7 @@ extension Reactive where Base: WCSession {
         }
     }
     
+    @available(iOS 9.3, *)
     @available(watchOS 2.0, *)
     public var didReceiveMessageDataWithReplyHandler: Observable<(messageData: Data, replyHandler: [String: Any])> {
         return delegate.methodInvoked(#selector(WCSessionDelegate.session(_:didReceiveMessageData:replyHandler:))).map{ a in
@@ -67,6 +73,7 @@ extension Reactive where Base: WCSession {
     
     /** -------------------------- Background Transfers ------------------------- */
     
+    @available(iOS 9.3, *)
     @available(watchOS 2.0, *)
     public var didReceiveApplicationContext: Observable<[String: Any]> {
         return delegate.methodInvoked(#selector(WCSessionDelegate.session(_:didReceiveApplicationContext:))).map{ a in
@@ -74,6 +81,7 @@ extension Reactive where Base: WCSession {
         }
     }
     
+    @available(iOS 9.3, *)
     @available(watchOS 2.0, *)
     public var didFinishUserInfoTransfer: Observable<WCSessionUserInfoTransfer> {
         
@@ -92,6 +100,7 @@ extension Reactive where Base: WCSession {
         }
     }
     
+    @available(iOS 9.3, *)
     @available(watchOS 2.0, *)
     public var didReceiveUserInfo: Observable<[String: Any]> {
         return delegate.methodInvoked(#selector(WCSessionDelegate.session(_:didReceiveUserInfo:))).map{ a in
@@ -99,6 +108,7 @@ extension Reactive where Base: WCSession {
         }
     }
     
+    @available(iOS 9.3, *)
     @available(watchOS 2.0, *)
     public var didFinishFileTransfer: Observable<WCSessionFileTransfer> {
         

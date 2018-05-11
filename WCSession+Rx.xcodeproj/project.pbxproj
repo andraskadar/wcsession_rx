@@ -7,41 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		018AB1A520A582E1004A03B0 /* WCSessionPhone_Rx.h in Headers */ = {isa = PBXBuildFile; fileRef = 018AB1A320A582E1004A03B0 /* WCSessionPhone_Rx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		018AB1A920A582EB004A03B0 /* RxWCSessionDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5137B03C1E704EC5005EBC80 /* RxWCSessionDelegateProxy.swift */; };
+		018AB1AA20A582EB004A03B0 /* WCSession+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5137B03D1E704EC5005EBC80 /* WCSession+Rx.swift */; };
+		40E83FBB8E1C50AA29992F70 /* Pods_WCSession_App_WCSessionPhone_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482EFC980CD0C02464719140 /* Pods_WCSession_App_WCSessionPhone_Rx.framework */; };
 		5137AFDF1E704B11005EBC80 /* WCSession+Rx.h in Headers */ = {isa = PBXBuildFile; fileRef = 5137AFDD1E704B11005EBC80 /* WCSession+Rx.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5137B03E1E704EC5005EBC80 /* RxWCSessionDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5137B03C1E704EC5005EBC80 /* RxWCSessionDelegateProxy.swift */; };
 		5137B03F1E704EC5005EBC80 /* WCSession+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5137B03D1E704EC5005EBC80 /* WCSession+Rx.swift */; };
+		84B83E5ED4B8ABAF0B5C876D /* Pods_WCSession_App_WCSession_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D3E8D203A54D123A0CA9C4 /* Pods_WCSession_App_WCSession_Rx.framework */; };
 		896984E2EFB2903B0732BBAA /* Pods_WCSession_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482BF407C52DD1CDA18B54DF /* Pods_WCSession_Rx.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		018AB1A120A582E1004A03B0 /* WCSessionPhone_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WCSessionPhone_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		018AB1A320A582E1004A03B0 /* WCSessionPhone_Rx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSessionPhone_Rx.h; sourceTree = "<group>"; };
+		018AB1A420A582E1004A03B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CE95FD3B36BA836BFD24B15 /* Pods-WCSession_App-WCSession_Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCSession_App-WCSession_Rx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCSession_App-WCSession_Rx/Pods-WCSession_App-WCSession_Rx.debug.xcconfig"; sourceTree = "<group>"; };
 		377D78DA906C10A40EB5B633 /* Pods-WCSession_Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCSession_Rx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCSession_Rx/Pods-WCSession_Rx.debug.xcconfig"; sourceTree = "<group>"; };
 		482BF407C52DD1CDA18B54DF /* Pods_WCSession_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCSession_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		482EFC980CD0C02464719140 /* Pods_WCSession_App_WCSessionPhone_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCSession_App_WCSessionPhone_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5137AFDA1E704B11005EBC80 /* WCSession_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WCSession_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5137AFDD1E704B11005EBC80 /* WCSession+Rx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WCSession+Rx.h"; sourceTree = "<group>"; };
 		5137AFDE1E704B11005EBC80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5137B03C1E704EC5005EBC80 /* RxWCSessionDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxWCSessionDelegateProxy.swift; sourceTree = "<group>"; };
 		5137B03D1E704EC5005EBC80 /* WCSession+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WCSession+Rx.swift"; sourceTree = "<group>"; };
+		57FD351390BF12B94126A676 /* Pods-WCSession_App-WCSessionPhone+Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCSession_App-WCSessionPhone+Rx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCSession_App-WCSessionPhone+Rx/Pods-WCSession_App-WCSessionPhone+Rx.debug.xcconfig"; sourceTree = "<group>"; };
+		93D3E8D203A54D123A0CA9C4 /* Pods_WCSession_App_WCSession_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCSession_App_WCSession_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C395EA773AB34261E1BF0A /* Pods-WCSession+Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCSession+Rx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCSession+Rx/Pods-WCSession+Rx.debug.xcconfig"; sourceTree = "<group>"; };
 		9F3D9C3A05779EB82816BE0A /* Pods-WCSession_Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCSession_Rx.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCSession_Rx/Pods-WCSession_Rx.release.xcconfig"; sourceTree = "<group>"; };
+		BD34C56D4E2273DD789A4BD8 /* Pods-WCSession_App-WCSessionPhone+Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCSession_App-WCSessionPhone+Rx.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCSession_App-WCSessionPhone+Rx/Pods-WCSession_App-WCSessionPhone+Rx.release.xcconfig"; sourceTree = "<group>"; };
+		C48121970E73C848696CF298 /* Pods-WCSession_App-WCSession_Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCSession_App-WCSession_Rx.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCSession_App-WCSession_Rx/Pods-WCSession_App-WCSession_Rx.release.xcconfig"; sourceTree = "<group>"; };
 		F0C656EBA2066843546FD23D /* Pods-WCSession+Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCSession+Rx.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCSession+Rx/Pods-WCSession+Rx.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		018AB19D20A582E1004A03B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E83FBB8E1C50AA29992F70 /* Pods_WCSession_App_WCSessionPhone_Rx.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5137AFD61E704B11005EBC80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				896984E2EFB2903B0732BBAA /* Pods_WCSession_Rx.framework in Frameworks */,
+				84B83E5ED4B8ABAF0B5C876D /* Pods_WCSession_App_WCSession_Rx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		018AB1A220A582E1004A03B0 /* WCSessionPhone+Rx */ = {
+			isa = PBXGroup;
+			children = (
+				018AB1A320A582E1004A03B0 /* WCSessionPhone_Rx.h */,
+				018AB1A420A582E1004A03B0 /* Info.plist */,
+			);
+			path = "WCSessionPhone+Rx";
+			sourceTree = "<group>";
+		};
 		47DD5E1EF8D021AE4FF7388A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				482BF407C52DD1CDA18B54DF /* Pods_WCSession_Rx.framework */,
+				482EFC980CD0C02464719140 /* Pods_WCSession_App_WCSessionPhone_Rx.framework */,
+				93D3E8D203A54D123A0CA9C4 /* Pods_WCSession_App_WCSession_Rx.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -50,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				5137AFDC1E704B11005EBC80 /* WCSession+Rx */,
+				018AB1A220A582E1004A03B0 /* WCSessionPhone+Rx */,
 				5137AFDB1E704B11005EBC80 /* Products */,
 				7EAF2D9FDF1EED7F00DD89A0 /* Pods */,
 				47DD5E1EF8D021AE4FF7388A /* Frameworks */,
@@ -60,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				5137AFDA1E704B11005EBC80 /* WCSession_Rx.framework */,
+				018AB1A120A582E1004A03B0 /* WCSessionPhone_Rx.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +118,10 @@
 				F0C656EBA2066843546FD23D /* Pods-WCSession+Rx.release.xcconfig */,
 				377D78DA906C10A40EB5B633 /* Pods-WCSession_Rx.debug.xcconfig */,
 				9F3D9C3A05779EB82816BE0A /* Pods-WCSession_Rx.release.xcconfig */,
+				57FD351390BF12B94126A676 /* Pods-WCSession_App-WCSessionPhone+Rx.debug.xcconfig */,
+				BD34C56D4E2273DD789A4BD8 /* Pods-WCSession_App-WCSessionPhone+Rx.release.xcconfig */,
+				1CE95FD3B36BA836BFD24B15 /* Pods-WCSession_App-WCSession_Rx.debug.xcconfig */,
+				C48121970E73C848696CF298 /* Pods-WCSession_App-WCSession_Rx.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -89,6 +129,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		018AB19E20A582E1004A03B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				018AB1A520A582E1004A03B0 /* WCSessionPhone_Rx.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5137AFD71E704B11005EBC80 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,6 +148,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		018AB1A020A582E1004A03B0 /* WCSessionPhone+Rx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 018AB1A820A582E1004A03B0 /* Build configuration list for PBXNativeTarget "WCSessionPhone+Rx" */;
+			buildPhases = (
+				C2809DAADB934BF1FAE01E3D /* [CP] Check Pods Manifest.lock */,
+				018AB19C20A582E1004A03B0 /* Sources */,
+				018AB19D20A582E1004A03B0 /* Frameworks */,
+				018AB19E20A582E1004A03B0 /* Headers */,
+				018AB19F20A582E1004A03B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WCSessionPhone+Rx";
+			productName = "WCSessionPhone+Rx";
+			productReference = 018AB1A120A582E1004A03B0 /* WCSessionPhone_Rx.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		5137AFD91E704B11005EBC80 /* WCSession_Rx */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5137AFE21E704B11005EBC80 /* Build configuration list for PBXNativeTarget "WCSession_Rx" */;
@@ -109,7 +176,6 @@
 				5137AFD61E704B11005EBC80 /* Frameworks */,
 				5137AFD71E704B11005EBC80 /* Headers */,
 				5137AFD81E704B11005EBC80 /* Resources */,
-				074DF67C1761118FA49A3202 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +196,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Shintaro Inomoto";
 				TargetAttributes = {
+					018AB1A020A582E1004A03B0 = {
+						CreatedOnToolsVersion = 9.3;
+						DevelopmentTeam = 45WDCQN3U5;
+						ProvisioningStyle = Automatic;
+					};
 					5137AFD91E704B11005EBC80 = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0920;
@@ -150,11 +221,19 @@
 			projectRoot = "";
 			targets = (
 				5137AFD91E704B11005EBC80 /* WCSession_Rx */,
+				018AB1A020A582E1004A03B0 /* WCSessionPhone+Rx */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		018AB19F20A582E1004A03B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5137AFD81E704B11005EBC80 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,21 +244,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		074DF67C1761118FA49A3202 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCSession_Rx/Pods-WCSession_Rx-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		46C3E9DECB9E0860757ADCAB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,7 +255,25 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WCSession_Rx-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-WCSession_App-WCSession_Rx-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2809DAADB934BF1FAE01E3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WCSession_App-WCSessionPhone+Rx-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -201,6 +283,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		018AB19C20A582E1004A03B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				018AB1AA20A582EB004A03B0 /* WCSession+Rx.swift in Sources */,
+				018AB1A920A582EB004A03B0 /* RxWCSessionDelegateProxy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5137AFD51E704B11005EBC80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +304,68 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		018AB1A620A582E1004A03B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57FD351390BF12B94126A676 /* Pods-WCSession_App-WCSessionPhone+Rx.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 45WDCQN3U5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "WCSessionPhone+Rx/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andraskadar.WCSessionPhone-Rx";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		018AB1A720A582E1004A03B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD34C56D4E2273DD789A4BD8 /* Pods-WCSession_App-WCSessionPhone+Rx.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 45WDCQN3U5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "WCSessionPhone+Rx/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andraskadar.WCSessionPhone-Rx";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5137AFE01E704B11005EBC80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -324,7 +477,7 @@
 		};
 		5137AFE31E704B11005EBC80 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 377D78DA906C10A40EB5B633 /* Pods-WCSession_Rx.debug.xcconfig */;
+			baseConfigurationReference = 1CE95FD3B36BA836BFD24B15 /* Pods-WCSession_App-WCSession_Rx.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -349,7 +502,7 @@
 		};
 		5137AFE41E704B11005EBC80 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F3D9C3A05779EB82816BE0A /* Pods-WCSession_Rx.release.xcconfig */;
+			baseConfigurationReference = C48121970E73C848696CF298 /* Pods-WCSession_App-WCSession_Rx.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -374,6 +527,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		018AB1A820A582E1004A03B0 /* Build configuration list for PBXNativeTarget "WCSessionPhone+Rx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				018AB1A620A582E1004A03B0 /* Debug */,
+				018AB1A720A582E1004A03B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5137AFD41E704B11005EBC80 /* Build configuration list for PBXProject "WCSession+Rx" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
