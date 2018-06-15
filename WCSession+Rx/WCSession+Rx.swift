@@ -41,14 +41,14 @@ extension Reactive where Base: WCSession {
     public func sendMessageData(_ data: Data) -> Single<Data> {
         return Single.create { (observer) -> Disposable in
             self.base.sendMessageData(data,
-                                  replyHandler: { observer(.success($0)) },
-                                  errorHandler: { observer(.error($0)) })
+                                      replyHandler: { observer(.success($0)) },
+                                      errorHandler: { observer(.error($0)) })
             return Disposables.create()
         }
     }
     
     /*
-    @available(watchOS 2.2, *)
+     @available(watchOS 2.2, *)
      public var didComplete: Observable<WCSessionActivationState> { ... }
      */
     
@@ -71,9 +71,38 @@ extension Reactive where Base: WCSession {
     
     @available(iOS 9.3, *)
     @available(watchOS 2.0, *)
-    public var didReceiveMessageWithReplyHandler: Observable<(message: [String: Any], replyHandler: [String: Any])> {
-        return delegate.methodInvoked(#selector(WCSessionDelegate.session(_:didReceiveMessage:replyHandler:))).map{ a in
-            return try self.castOrThrow(([String: Any], [String: Any]).self, (a[1], a[2]))
+    public var didReceiveMessageWithReplyHandler: Observable<(message: [String: Any], replyHandler: ([String: Any]) -> Void)> {
+        typealias __ChallengeHandler =  @convention(block) ([String : Any]) -> Void
+        return delegate.methodInvoked(#selector(WCSessionDelegate.session(_:didReceiveMessage:replyHandler:))).map { arg in
+            let message = try self.castOrThrow([String: Any].self, arg[1])
+            /// Now you `Can't` transform closure easily because they are excuted
+            /// in the stack if try it you will get the famous error
+            /// `Could not cast value of type '__NSStackBlock__' (0x12327d1a8) to`
+            /// this is because closures are transformed into a system type which is `__NSStackBlock__`
+            /// the above mentioned type is not exposed to `developer`. So everytime
+            /// you execute a closure the compiler transforms it into this Object.
+            /// So you go through the following steps to get a human readable type
+            /// of the closure signature:
+            /// 1. closureObject is type of AnyObject to that holds the raw value from
+            /// the array.
+            var closureObject: AnyObject? = nil
+            /// 2. make the array mutable in order to access the `withUnsafeMutableBufferPointer`
+            /// fuctionalities
+            var mutableArg = arg
+            /// 3. Grab the closure at index 3 of the array, but we have to use the C-style
+            /// approach to access the raw memory underpinning the array and store it in closureObject
+            /// Now the object stored in the `closureObject` is `Unmanaged` and `some unspecified type`
+            /// the intelligent swift compiler doesn't know what sort of type it contains. It is Raw.
+            mutableArg.withUnsafeMutableBufferPointer { ptr in
+                closureObject = ptr[2] as AnyObject
+            }
+            /// 4. instantiate an opaque pointer to referenc the value of the `unspecified type`
+            let __challengeBlockPtr = UnsafeRawPointer(Unmanaged<AnyObject>.passUnretained(closureObject as AnyObject).toOpaque())
+            /// 5. Here the magic happen we forcefully tell the compiler that anything
+            /// found at this memory address that is refrenced should be a type of
+            /// `__ChallengeHandler`!
+            let handler = unsafeBitCast(__challengeBlockPtr, to: __ChallengeHandler.self)
+            return (message, handler)
         }
     }
     
@@ -87,9 +116,38 @@ extension Reactive where Base: WCSession {
     
     @available(iOS 9.3, *)
     @available(watchOS 2.0, *)
-    public var didReceiveMessageDataWithReplyHandler: Observable<(messageData: Data, replyHandler: [String: Any])> {
-        return delegate.methodInvoked(#selector(WCSessionDelegate.session(_:didReceiveMessageData:replyHandler:))).map{ a in
-            return try self.castOrThrow((Data, [String: Any]).self, (a[1], a[2]))
+    public var didReceiveMessageDataWithReplyHandler: Observable<(messageData: Data, replyHandler: (Data) -> Void)> {
+        typealias __ChallengeHandler =  @convention(block) (Data) -> Void
+        return delegate.methodInvoked(#selector(WCSessionDelegate.session(_:didReceiveMessageData:replyHandler:))).map { arg in
+            let message = try self.castOrThrow(Data.self, arg[1])
+            /// Now you `Can't` transform closure easily because they are excuted
+            /// in the stack if try it you will get the famous error
+            /// `Could not cast value of type '__NSStackBlock__' (0x12327d1a8) to`
+            /// this is because closures are transformed into a system type which is `__NSStackBlock__`
+            /// the above mentioned type is not exposed to `developer`. So everytime
+            /// you execute a closure the compiler transforms it into this Object.
+            /// So you go through the following steps to get a human readable type
+            /// of the closure signature:
+            /// 1. closureObject is type of AnyObject to that holds the raw value from
+            /// the array.
+            var closureObject: AnyObject? = nil
+            /// 2. make the array mutable in order to access the `withUnsafeMutableBufferPointer`
+            /// fuctionalities
+            var mutableArg = arg
+            /// 3. Grab the closure at index 3 of the array, but we have to use the C-style
+            /// approach to access the raw memory underpinning the array and store it in closureObject
+            /// Now the object stored in the `closureObject` is `Unmanaged` and `some unspecified type`
+            /// the intelligent swift compiler doesn't know what sort of type it contains. It is Raw.
+            mutableArg.withUnsafeMutableBufferPointer { ptr in
+                closureObject = ptr[2] as AnyObject
+            }
+            /// 4. instantiate an opaque pointer to referenc the value of the `unspecified type`
+            let __challengeBlockPtr = UnsafeRawPointer(Unmanaged<AnyObject>.passUnretained(closureObject as AnyObject).toOpaque())
+            /// 5. Here the magic happen we forcefully tell the compiler that anything
+            /// found at this memory address that is refrenced should be a type of
+            /// `__ChallengeHandler`!
+            let handler = unsafeBitCast(__challengeBlockPtr, to: __ChallengeHandler.self)
+            return (message, handler)
         }
     }
     
@@ -162,5 +220,5 @@ extension Reactive where Base: WCSession {
         
         return returnValue
     }
-
+    
 }
